@@ -1,0 +1,49 @@
+### Create Client
+POST http://localhost:8080/api/client
+Content-Type: application/json
+
+{
+
+    "firstName": "John1", 
+    "lastName": "Doe2", 
+    "email":  "john1@gmail.com", 
+    "cardNumber": "232322323", 
+    "balance": 1999
+}
+
+### get All clients
+GET http://localhost:8080/api/clients
+
+### Create Banker
+POST http://localhost:8080/api/banker
+Content-Type: application/json
+
+{
+
+    "firstName": "John", 
+    "lastName": "Doe", 
+    "email":  "john@gmail.com", 
+    "cardNumber": "23232323", 
+    "employeeNumber": 23
+}
+
+### get All bankers
+GET http://localhost:8080/api/bankers
+
+
+### Create Transaction
+POST http://localhost:8080/api/client/3/transaction
+Content-Type: application/json
+
+{
+    "type": "DEPOSIT",
+    "amount": 20020
+}
+
+### Connect Banker to Client
+PUT  http://localhost:8080/api/client/3/banker/1
+
+
+
+### delete client
+DELETE http://localhost:8080/api/client/1
